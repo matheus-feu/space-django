@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -58,6 +58,8 @@ table {
     width: auto;
     position: relative;
     margin-bottom: 1.5rem;
+    background-size: cover;
+    background-position: center;
 }
 
 .banner__imagem {
@@ -67,6 +69,7 @@ table {
 .banner__titulo {
     color: #FFFFFF;
     font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     width: 350px;
     line-height: 50px;
     position: absolute;
@@ -89,7 +92,7 @@ table {
     height: auto;
     justify-content: space-between;
     padding: 2px;
-    width: auto; 
+    width: auto;
 }
 
 .busca__fundo {
@@ -105,8 +108,10 @@ table {
     align-items: center;
     background-color: transparent;
     border: none;
-    font-size: 1rem;
-    height: 24px;
+    outline: none;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    height: 26px;
     padding: 10px;
     width: 500px;
 }
@@ -136,7 +141,8 @@ table {
 }
 
 .card {
-    border-radius: 10px;
+    border-radius: 15px;
+    border: none;
     box-shadow: 0px 10px 10px #00000050;
     color: #FFFFFF;
     margin-bottom: 1.5rem;
@@ -154,18 +160,19 @@ table {
     border-radius: 8px;
     border: 2px solid transparent;
     font-size: 1.2rem;
-    left: 310px;
+    left: 300px;
     margin-right: 1.5rem;
     padding: .5rem .5rem;
     position: absolute;
     text-align: center;
     top: 20px;
-    width: 100px;
+    width: 130px;
 }
 
 .card__info {
-    font-size: 1.5rem;
-    padding: 0 1.5rem 1.5rem 1.5rem;
+    background-color: #154580;
+    font-size: 1.2rem;
+    padding: 0 1.5rem 1rem 1.5rem;
 }
 
 .card__titulo {
@@ -182,11 +189,12 @@ table {
 
 .card__texto img {
     cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .card__descricao {
     font-size: 0.6em;
-    margin-top: 0.8em;
+    margin-top: 0.80em;
 }
 
 .galeria {
@@ -373,7 +381,7 @@ table {
     margin-right: 1.5rem;
     border-radius: 8px;
     padding: .8rem .5rem;
-    width: 100px;
+    width: 110px;
     text-align: center;
     border: 2px solid transparent;
 }
@@ -381,4 +389,25 @@ table {
 .tags__tag:hover {
     border: 2px solid #7B78E5;
     cursor: pointer;
+}
+
+.heart {
+  font-size: 32px;
+  cursor: pointer;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

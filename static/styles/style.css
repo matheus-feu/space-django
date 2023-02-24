@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -16,8 +16,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video
-{
+time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -26,7 +25,7 @@ time, mark, audio, video
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -90,7 +89,7 @@ table {
     height: auto;
     justify-content: space-between;
     padding: 2px;
-    width: auto; 
+    width: auto;
 }
 
 .busca__fundo {
@@ -106,8 +105,8 @@ table {
     align-items: center;
     background-color: transparent;
     border: none;
-    color: #FFFFFF;
-    font-size: 1rem;
+    font-size: 2px;
+    color : #FFFFFF;
     height: 24px;
     padding: 10px;
     width: 500px;
