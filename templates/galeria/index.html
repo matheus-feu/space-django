@@ -1,6 +1,7 @@
 {% extends 'galeria/base.html' %}
 {% load static %}
 {% block content %}
+
             <section class="conteudo">
                 <section class="banner">
                     <img class="banner__imagem" src="{% static '/assets/imagens/Banner(2).png' %}" alt="banner Alura Space">
@@ -23,16 +24,15 @@
                             {% for fotografia in cards %}
                             <li class="card">
                                 <a href="{% url 'imagem' fotografia.id %}">
-                                    {% if fotografia.foto == "" or fotografia.foto == null %}
+                                {% if fotografia.foto == "" or fotografia.foto == null %}
                                     <img class="card__imagem" src="{% static '/assets/imagens/galeria/image-not-found.jpg'%}" alt="foto">
-                                    {% else %}
+                                {% else %}
                                     <img class="card__imagem" src="{{ fotografia.foto.url }}" alt="foto">
-                                    {% endif %}
+                                {% endif %}
                                 </a>
                                 <span class="card__tag">{{ fotografia.categoria }}</span>
                                 <div class="card__info">
                                     <p class="card__titulo">{{ fotografia.nome }}</p>
-
                                     <div class="card__texto">
                                         <p class="card__descricao">Créditos: {{ fotografia.legenda }}</p>
                                         <span>
@@ -40,7 +40,6 @@
                                         </span>
                                     </div>
                                 </div>
-
                             </li>
                             {% endfor %}
                             {% else %}

@@ -27,3 +27,4 @@ class Fotografia(models.Model):
 
     def __str__(self):
         return self.nome + " - " + self.categoria + " - " + self.legenda
+
