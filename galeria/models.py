@@ -1,6 +1,7 @@
 from datetime import datetime
 from django.db import models
 from stdimage.models import StdImageField
+from django.contrib.auth.models import User
 
 class Fotografia(models.Model):
     """Modelo de Fotografia, contém as informações de cada fotografia"""
@@ -20,6 +21,7 @@ class Fotografia(models.Model):
                                 variations={'thumbnail': {'width': 500, 'height': 500, 'crop': True}})
     publicada = models.BooleanField(default=False)
     data_publicacao = models.DateTimeField(default=datetime.now, blank=True)
+    usuario = models.ForeignKey(to=User, on_delete=models.SET_NULL, null=True, blank=True, related_name='user')
 
     class Meta:
         verbose_name = 'Fotografia'
